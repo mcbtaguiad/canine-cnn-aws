@@ -1,0 +1,100 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+{% block title %}Add to Database{% endblock %}
+{% block head %}
+  {{super()}}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/styles.css">
+{% endblock %}
+
+{% block navbar %}
+<div class="container">
+  <div class="navbar">
+    <ul class="nav navbar-nav">
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('get_all_admin') }}">Database</a></li>
+      <li><a href="{{ url_for('files') }}">Storage</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+            
+            <div style="text-align: center;">
+                <h2>Add to Database</h2>
+            </div>
+            <br>
+            <p class="row align-items-center justify-content-center">
+				{% with messages = get_flashed_messages() %}
+	  				{% if messages %}
+        				{{ messages[0] }}
+						
+						
+	  				{% endif %}
+				{% endwith %}
+				
+				</p>
+            
+            <div style="text-align: left;" >
+                <h5>Dog Profile</h5>
+            </div>
+
+            <form method="POST">
+
+                
+                <div class="form-row">
+                    <input class="form-control" type="text" placeholder="Disease" id="disease" name="disease">
+                </div>
+                <br>
+             
+                <div class="form-row">
+                    <input class="form-control" type="text" placeholder="Confidence" id="confidence" name="confidence">
+                </div>
+                <br>
+     
+                <div class="form-row ">
+                    <input class="form-control " type="text" placeholder="Breed" id="breed" name="breed">
+                </div>
+                <br>
+ 
+                <div class="form-row ">
+                    <input class="form-control " type="text" placeholder="Sex" id="sex" name="sex">
+                </div>
+                <br>
+
+                <div class="form-row ">
+                    <input class="form-control " type="text" placeholder="Age in Month(s)" id="agemonth" name="agemonth">
+                </div>
+                <br>
+  
+                <div class="form-row ">
+                    <input class="form-control " type="text" placeholder="Filename" id="filename" name="filename">
+                </div>
+                <br>
+                
+                <div class="form-row ">
+                    <input class="form-control " type="text" placeholder="Time" id="time" name="time">
+                </div>
+
+                <br>
+                <button type="submit " class="btn btn-primary " >Submit</button>
+            
+            </form>
+            <br><br>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
+        crossorigin="anonymous "></script>
+
+
+{% endblock %}
