@@ -167,13 +167,7 @@ class MainActivity : AppCompatActivity() {
        val builder = AlertDialog.Builder(this)
        builder.setTitle("About Application")
        builder.setMessage(
-           "Mapua University Undergraduate Thesis\n" +
-                   "Members: " + "Joshua Ang;\n" +
-                   "Julie Seline Tapang;\n" +
-                   "Jovan Valenzuela\n" +
-                   "Advisers: " +
-                   "Engr. Jessie Balbin;\n" +
-                   "Engr. Julius Sese")
+           "CNN APP")
        builder.setPositiveButton("OK", null)
        val dialog = builder.show()
        val messageText = dialog.findViewById<View>(android.R.id.message) as TextView?
